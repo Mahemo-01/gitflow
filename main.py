@@ -6,6 +6,9 @@ def convert() -> int:
     km_output: int = miles * 1.61
     output_string.set(f'{km_output} Km')
 
+def idk(num: int) -> int:
+    return num * 2
+
 # window
 window = tk.Tk()
 window.title('Demo')
