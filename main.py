@@ -1,6 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
+def convert() -> int:
+    miles: int = entry_int.get()
+    km_output: int = miles * 1.61
+    output_string.set(f'{km_output} Km')
+
 # window
 window = tk.Tk()
 window.title('Demo')
@@ -15,7 +20,7 @@ input_frame = ttk.Frame(master = window)
 
 entry_int = tk.IntVar() # guarda y actualiza valores en otra var
 entry = ttk.Entry(master = input_frame, textvariable = entry_int)
-button = ttk.Button(master = input_frame, text = 'Convert')
+button = ttk.Button(master = input_frame, text = 'Convert', command = convert)
 
 entry.pack(side = 'left', padx = 10)
 button.pack(side = 'left')
